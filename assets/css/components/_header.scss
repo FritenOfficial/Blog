@@ -1,0 +1,131 @@
+.edica-header {
+    &.edica-landing-header {
+        background-image: linear-gradient(90deg, #ffffff 0%, #ffffff 55%, #fff0e8 55%, #fff0e8 100%);
+
+        .carousel-indicators {
+            top: 0;
+            left: auto;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+
+            li {
+                height: auto;
+                border: 0;
+                text-indent: 0;
+                background-color: transparent;
+                font-size: 21px;
+                font-weight: $font-weight-bold;
+                color: $black;
+                line-height: 2.14;
+            }
+        }
+
+        .carousel-content-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h1 {
+                margin-bottom: 22px;
+            }
+
+            p {
+                margin-bottom: 22px;
+            }
+
+            .carousel-content-btns {
+                .btn {
+                    padding: 18px 34px;
+                    font-size: 18px;
+                    font-weight: $font-weight-bold;
+                    color: $white;
+                    margin-right: 24px;
+                    margin-bottom: 24px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        .carousel-img-wrapper {
+            display: flex;
+            padding-top: 95px;
+            justify-content: center;
+            align-items: flex-end;
+        }
+    }
+    
+    .nav-link {
+        font-size: 16px;
+        line-height: 1;
+        font-weight: $font-weight-bold;
+
+        &:hover {
+            color: theme-color(success);
+        }
+    }
+
+    @media(min-width: 992px) {
+        .dropdown {
+            .dropdown-menu {
+                display: block;
+                opacity: 0;
+                transform: translateY(15px);
+                transition: all 0.4s ease-in-out;
+                border-radius: 0;
+                border: 0;
+                box-shadow: 0 0 7px 0 rgba(#000000, 0.15);
+            }
+
+            &:hover {
+                .dropdown-menu {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+
+    .navbar-light {
+        .navbar-nav {
+            .show, .active {
+                & > .nav-link {
+                    text-decoration: underline;
+                }
+            }
+
+            .nav-link {
+                .show, .active {
+                    text-decoration: underline;
+                }
+
+                &:hover {
+                    color: theme-color(success);
+                }
+            }
+
+            .dropdown {
+                &:hover {
+                    > a {
+                        color: theme-color(success);
+                    }
+
+                    a:hover {
+                        color: theme-color(success);
+                    }
+                }
+            }
+        }
+    }
+    .navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+        text-decoration: underline;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+        color: theme-color(success);
+    }
+    
+}
